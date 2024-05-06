@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .center_app {
+            text-align: center;
+        }
+
+        .count,
+        #increaseBtn,
+        #decreaseBtn {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<h1 class="center_app">Count App</h1>
+<p>Count : <span id="count" style="text-align: center;">0</span></p>
+<button id="increaseBtn">Increment</button>
+<button id="decreaseBtn">Decrement</button>
+
+<body>
+    <script>
+        const elementCount = document.getElementById('count');
+        const increaseBtn = document.getElementById('increaseBtn');
+        const decreaseBtn = document.getElementById('decreaseBtn');
+
+        let count = 0;
+
+        function updateCount() {
+            elementCount.textContent = count;
+        }
+
+        increaseBtn.addEventListener('click', function () {
+            count++;
+            updateCount();
+        })
+
+        decreaseBtn.addEventListener("click", function () {
+            if (count > 0) {
+                count--;
+                updateCount();
+            }
+        })
+    </script>
+</body>
+
+</html>

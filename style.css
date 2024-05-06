@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.center_app {
+    text-align: center;
+    background: #000;
+    color: white;
+    text-size-adjust: 1px;
+}
